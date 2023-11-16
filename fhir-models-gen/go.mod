@@ -1,9 +1,9 @@
-module github.com/samply/golang-fhir-models/fhir-models-gen
+module github.com/soundprediction/golang-fhir-models/fhir-models-gen
 
 go 1.19
 
 require (
-	github.com/dave/jennifer v1.6.0
+	github.com/dave/jennifer v1.7.0
 	github.com/spf13/cobra v1.6.1
 )
 

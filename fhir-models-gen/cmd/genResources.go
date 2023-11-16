@@ -17,7 +17,6 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -25,7 +24,7 @@ import (
 	"unicode"
 
 	"github.com/dave/jennifer/jen"
-	"github.com/samply/golang-fhir-models/fhir-models-gen/fhir"
+	"github.com/soundprediction/golang-fhir-models/fhir-models-gen/fhir"
 	"github.com/spf13/cobra"
 )
 
@@ -86,7 +85,7 @@ var genResourcesCmd = &cobra.Command{
 			if !HasSuffix(info.Name(), ".json") {
 				return nil
 			}
-			bytes, err := ioutil.ReadFile(path)
+			bytes, err := os.ReadFile(path)
 			if err != nil {
 				return err
 			}
